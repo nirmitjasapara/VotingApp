@@ -1,0 +1,30 @@
+:root {
+  --nav-height: 50px;
+  --sidebar-width: 300px;
+}
+.App {
+    min-height: 100vh;
+}
+.frame {
+  display: flex;
+  flex-direction: row;
+}
+.App_main {
+  background-color: white;
+}
+.red {
+    color: red;
+    border: solid red 2px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+.default {
+    color: #444;
+    border: solid grey 2px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
