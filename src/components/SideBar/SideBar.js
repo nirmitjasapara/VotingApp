@@ -3,12 +3,14 @@ import CustomContext from '../../contexts/CustomContext';
 import ApiService from '../../services/api-service';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faBars } from '@fortawesome/free-solid-svg-icons'
 import './SideBar.css'
 import '../../components/App/App.css'
 
 export default class SideBar extends Component {
   static contextType = CustomContext
+
+  state = { closed: false }
 
   componentDidMount() {
     this.context.clearError();
@@ -30,10 +32,19 @@ export default class SideBar extends Component {
     )
   }
 
+  handleToggle () {
+    this.setState({closed: !this.state.closed})
+  }
+
   render() {
+    const toggle = (this.state.closed) ? 'sidebar-closed' : '';
     return (
-        <nav className='nav'>
-            {this.renderPollList()}
+        <nav className={toggle}>
+            <div className='sidebar'>
+              {this.renderPollList()}
+            </div>
+            <FontAwesomeIcon icon={faBars} 
+            onClick={() => this.handleToggle()} className="bar"/>
             <Link
                 to='/add'
                 type='button'

@@ -1,6 +1,6 @@
 :root {
   --nav-height: 50px;
-  --sidebar-width: 300px;
+  --sidebar-width: 0px;
 }
 .App {
     min-height: 100vh;
@@ -8,9 +8,6 @@
 .frame {
   display: flex;
   flex-direction: row;
-}
-.App_main {
-  background-color: white;
 }
 .red {
     color: red;
@@ -27,4 +24,9 @@
     padding: 20px;
     margin: 20px;
     text-align: center;
+}
+@media screen and (min-width: 700px) {
+  :root {
+    --sidebar-width: 300px;
+  }
 }

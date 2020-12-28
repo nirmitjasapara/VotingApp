@@ -1,12 +1,29 @@
-.nav {
+.sidebar {
     position: fixed;
     top: var(--nav-height);
     left: 0;
     bottom: 0;
-    width: var(--sidebar-width);
+    width: calc(100% - 90px);
     overflow-y: auto;
     overflow-x: hidden;
     border-right: 1px solid #bbb;
+}
+.bar {
+    position: fixed;
+    top: calc(var(--nav-height) - 5px);
+    right: 0px;
+    color: #000;
+    background-color: #3086ff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.sidebar-closed .sidebar{
+    display: none;
+}
+.sidebar-closed .bar{
+    left: 0px;
 }
 .list-item{
     text-decoration: none;
@@ -25,8 +42,8 @@
 }
 .add-button {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 20px;
+    right: 20px;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -44,4 +61,16 @@
 .icon{
     color: #ffffff;
     font-size: 25px;
+}
+@media screen and (min-width: 700px) {
+    .sidebar {
+        width: var(--sidebar-width);
+    }
+    .bar {
+        display: none;
+    }
+    .add-button {
+        bottom: 50px;
+        right: 50px;
+    }
 }
