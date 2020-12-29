@@ -29,11 +29,12 @@ export default class Poll extends Component {
 
   renderOptions(polloptions) {
     const { poll } = this.context
+    console.log(poll.currentVote);
     return polloptions.map((x, i) =>
         <div
           className={'option'
            + ((x.id===this.state.polloption_id) ? ' selected' : '')
-           + ((x.id===poll.currentVote) ? ' voted' : '')}
+           + ((x.id===poll.currentVote?.id) ? ' voted' : '')}
           onClick={e => this.handleInputChange(x.id)}
           key={'Poll__options' + i}
           id={'Poll__options' + i}
