@@ -17,9 +17,8 @@ export default class MainPage extends Component {
     const { pollId } = this.props.match.params;
     console.log({'now': this.props, 'prev': prevProps,
                 'nowId': pollId, 'previd': prevProps.match.params.pollId});
-    if (prevProps.match.params.pollId !== pollId)
+    if (pollId !== this.context.poll.pollId)
     {
-        this.context.clearPoll();
         if (pollId != null)
         {
           ApiService.getPoll(pollId)
