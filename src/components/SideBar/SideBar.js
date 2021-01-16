@@ -10,7 +10,7 @@ import '../../components/App/App.css'
 export default class SideBar extends Component {
   static contextType = CustomContext
 
-  state = { closed: false }
+  state = { closed: true }
 
   componentDidMount() {
     this.context.clearError();

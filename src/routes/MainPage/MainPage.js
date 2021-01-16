@@ -17,7 +17,7 @@ export default class MainPage extends Component {
     const { pollId } = this.props.match.params;
     console.log({'now': this.props, 'prev': prevProps,
                 'nowId': pollId, 'previd': prevProps.match.params.pollId});
-    if (pollId !== this.context.poll.pollId)
+    if (pollId !== this.context.poll.id)
     {
         if (pollId != null)
         {
