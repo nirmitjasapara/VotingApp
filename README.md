@@ -3,7 +3,7 @@ Let's vote is an app that allows users to post their own polls so that others ca
 
 [Go to the app](https://voting-app-jade.vercel.app/)
 
-[main page image](./images/main.png)
+![main page image](./images/main.png)
 
 ## Available Scripts
 
