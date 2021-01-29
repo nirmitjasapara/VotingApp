@@ -13,11 +13,9 @@ export default class MainPage extends Component {
     this.context.addCurrentVote({'id': polloption_id});
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { pollId } = this.props.match.params;
-    console.log({'now': this.props, 'prev': prevProps,
-                'nowId': pollId, 'previd': prevProps.match.params.pollId});
-    if (pollId !== this.context.poll.id)
+    if (parseFloat(pollId) !== this.context.poll.id)
     {
         if (pollId != null)
         {
@@ -31,7 +29,7 @@ export default class MainPage extends Component {
                 if(v.length)
                   this.context.addCurrentVote(v[0].id);
               })
-              .catch(this.context.setError)
+              .catch(this.context.setError) 
           }
         }
     }

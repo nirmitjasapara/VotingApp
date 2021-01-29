@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Let's Vote
+Let's vote is an app that allows users to post their own polls so that others can vote on them.
+[Go to the app](https://voting-app-jade.vercel.app/)
+![main page image](./images/main.png)
 
 ## Available Scripts
 
