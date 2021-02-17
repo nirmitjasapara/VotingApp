@@ -28,7 +28,7 @@
 
 .log-in {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .Hyph {

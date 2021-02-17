@@ -1,30 +1,28 @@
-import React, { Component } from 'react'
-import AddForm from '../../components/AddForm/AddForm'
-import { Section } from '../../components/Utils/Utils'
-import './AddPage.css'
+import React, { Component } from "react";
+import AddForm from "../../components/AddForm/AddForm";
+import { Section } from "../../components/Utils/Utils";
+import "./AddPage.css";
 
 export default class AddPage extends Component {
   static defaultProps = {
     history: {
-      push: () => {},
-    },
-  }
+      push: () => {}
+    }
+  };
 
   handleAddSuccess = user => {
-    const { history } = this.props
-    history.push('/')
-  }
+    const { history } = this.props;
+    history.push("/");
+  };
 
   render() {
     return (
       <main className="main">
-        <Section className='AddPage'>
+        <Section className="AddPage">
           <h2>Add Poll</h2>
-          <AddForm
-            onAddSuccess={this.handleAddSuccess}
-          />
+          <AddForm onAddSuccess={this.handleAddSuccess} />
         </Section>
       </main>
-    )
+    );
   }
 }

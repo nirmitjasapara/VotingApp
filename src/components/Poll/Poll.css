@@ -22,7 +22,7 @@ section p {
 .selected {
   border: solid #ff305d 3px;
 }
-.vote_button{
+.vote_button {
   border: solid #aaa 2px;
   border-radius: 5px;
   padding: 10px;
@@ -32,7 +32,7 @@ section p {
   color: white;
 }
 .vote_button:disabled,
-.vote_button[disabled]{
+.vote_button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
@@ -45,7 +45,7 @@ section p {
   background-color: #ccc;
   color: #666;
 }
-.voted:disabled, 
+.voted:disabled,
 .voted[disabled] {
   border: solid #ff8330 2px;
   cursor: default;
