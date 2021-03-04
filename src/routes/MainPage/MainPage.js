@@ -10,7 +10,7 @@ export default class MainPage extends Component {
   static contextType = CustomContext;
 
   handleVoteSuccess = polloption_id => {
-    this.context.addCurrentVote({ id: polloption_id });
+    this.context.addCurrentVote(polloption_id);
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -24,6 +24,7 @@ export default class MainPage extends Component {
           ApiService.getVote(pollId)
             .then(v => {
               if (v.length) this.context.addCurrentVote(v[0].id);
+              else this.context.addCurrentVote(null);
             })
             .catch(this.context.setError);
         }
